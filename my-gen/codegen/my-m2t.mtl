@@ -1,0 +1,23 @@
+[comment encoding = UTF-8 /]
+[comment]
+ As we handle UML models, we register UML metamodel.
+ Be careful while changing .mtl name, module name MUST 
+ have the same name as its file.
+[/comment]
+[module my-m2t('http://www.eclipse.org/uml2/4.0.0/UML')]
+
+[comment]
+ Main entry.
+ * Do NOT change its name, it must be "generate".
+ * You can change input UML type to the one
+   you want (e.g, "m : Model" or "c : Class" ...).
+ * "[file ../]" block can be transfered in other 
+   templates. Main entry does NOT have to contain
+   this block, it can be put in other ones.
+[/comment]
+[template public generate(m : Model)]
+[comment @main/]
+[file (m.name.concat('.txt'), false, 'UTF-8')]
+      # EMPTY FILE
+[/file]
+[/template]
