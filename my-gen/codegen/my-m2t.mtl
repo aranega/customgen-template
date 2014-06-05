@@ -27,7 +27,7 @@
 
 # PACKAGE: [p.qualifiedName/]
 [p.packagedElement->select(not oclIsKindOf(Package)).gen()/]
-[p.packagedElement->select(oclIsKindOf(Package).gen()/]
+[p.packagedElement->select(oclIsKindOf(Package)).gen()/]
 [/template]
 
 [template public gen(c : Class)]
