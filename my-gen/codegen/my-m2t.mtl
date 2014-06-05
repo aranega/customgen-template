@@ -27,8 +27,6 @@
 
 # PACKAGE: [p.qualifiedName/]
 [p.packagedElement.gen()/]
-
-
 [/template]
 
 [template public gen(c : Class)]
