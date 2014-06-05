@@ -17,7 +17,19 @@
 [/comment]
 [template public generate(m : Model)]
 [comment @main/]
-[file (m.name.concat('.txt'), false, 'UTF-8')]
-      # EMPTY FILE
+[file (m.name.concat('.md'), false, 'UTF-8')]
+[m.packagedElement.gen()/]
 [/file]
+[/template]
+
+[template public gen(p : PackageableElement) /]
+[template public gen(p : Package) ? (not p.packagedElement->isEmpty())]
+# PACKAGE: [p.qualifiedName/]
+[p.packagedElement.gen()/]
+
+
+[/template]
+
+[template public gen(c : Class)]
+## CLASS: [c.name/]
 [/template]
