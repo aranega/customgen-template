@@ -33,4 +33,10 @@
 [template public gen(c : Class)]
 ## CLASS: [c.name/]
 
+[c.ownedProperties.genProp()/]
+[/template]
+
+[template public genProp(p : Property)]
+* Property: __[p.name/]__ *[if (p.type <> null)][p.type.qualifiedName/][else]Undefined[/if]
+
 [/template]
