@@ -38,6 +38,6 @@
 [/for]
 [/template]
 
-[template public genProp(p : Property)]
+[template public genProp(p : Property) post (trim())]
 * ['['/]Property] __[p.name/]__: *[if (p.type <> null)][p.type.qualifiedName/][else]Undefined[/if]*
 [/template]
