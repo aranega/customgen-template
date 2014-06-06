@@ -25,18 +25,19 @@
 [template public gen(p : PackageableElement) /]
 [template public gen(p : Package) ? (not p.packagedElement->isEmpty())]
 
-# PACKAGE: [p.qualifiedName/]
+# ['['/]PACKAGE] [p.qualifiedName/]
 [p.packagedElement->select(not oclIsKindOf(Package)).gen()/]
 [p.packagedElement->select(oclIsKindOf(Package)).gen()/]
 [/template]
 
 [template public gen(c : Class)]
-## CLASS: [c.name/]
-[c.attribute.genProp()/]
 
+## ['['/]CLASS] [c.name/]
+[for (p : Property | c.attribute) separator('\n')]
+[p.genProp()/]
+[/for]
 [/template]
 
 [template public genProp(p : Property)]
-* Property: __[p.name/]__ *[if (p.type <> null)][p.type.qualifiedName/][else]Undefined[/if]*
-
+* ['['/]Property] __[p.name/]__: *[if (p.type <> null)][p.type.qualifiedName/][else]Undefined[/if]*
 [/template]
