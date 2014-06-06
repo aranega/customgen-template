@@ -37,6 +37,6 @@
 [/template]
 
 [template public genProp(p : Property)]
-* Property: __[p.name/]__ *[if (p.type <> null)][p.type.qualifiedName/][else]Undefined[/if]
+* Property: __[p.name/]__ *[if (p.type <> null)][p.type.qualifiedName/][else]Undefined[/if]*
 
 [/template]
