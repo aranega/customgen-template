@@ -34,10 +34,9 @@
 
 ## ['['/]CLASS] [c.name/]
 [for (p : Property | c.attribute) separator('\n')]
-[p.genProp()/]
-[/for]
+[p.genProp()/][/for]
 [/template]
 
-[template public genProp(p : Property) post (trim())]
+[template public genProp(p : Property)]
 * ['['/]Property] __[p.name/]__: *[if (p.type <> null)][p.type.qualifiedName/][else]Undefined[/if]*
 [/template]
