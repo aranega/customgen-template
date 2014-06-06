@@ -33,7 +33,7 @@
 [template public gen(c : Class)]
 ## CLASS: [c.name/]
 
-[c.ownedProperties.genProp()/]
+[c.attribute.genProp()/]
 [/template]
 
 [template public genProp(p : Property)]
