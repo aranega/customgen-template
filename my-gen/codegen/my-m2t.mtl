@@ -33,8 +33,9 @@
 [template public gen(c : Class)]
 
 ## ['['/]CLASS] [c.name/]
-[for (p : Property | c.attribute) separator('\n')]
-[p.genProp()/][/for]
+[for (p : Property | c.attribute)]
+[p.genProp()/]
+[/for]
 [/template]
 
 [template public genProp(p : Property)]
